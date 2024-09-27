@@ -4,14 +4,18 @@ char    *ft_strchr(const char   *s, int c)
 {
         while (*s) //mientras el puntero en la cadena exista
         {
-                if (*s == a) //mientras el puntero busca caracter en la cadena que sea igual
+                if (*s == c) //mientras el puntero busca caracter en la cadena que sea igual
                 {
                         return ((char *) s);
 
                 }
                 s++;
         }
-        if (a == '\0')
+        if (c == '\0')
           return ((char *) s);
         return (0);
+}
+int     main (void)
+{
+        printf("%s", ft_strchr("Hola que tal", 'q'));
 }
