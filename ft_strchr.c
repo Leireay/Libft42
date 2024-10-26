@@ -1,20 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: larellan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/26 09:38:43 by larellan          #+#    #+#             */
+/*   Updated: 2024/10/26 09:38:50 by larellan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <libft.h>
 
-char        *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-        while (*s) //mientras el puntero en la cadena exista
-        {
-                if (*s == c) //mientras el puntero busca caracter en la cadena que sea igual
-                {
-                        return ((char *) s);
-                }
-                s++;
-        }
-        if (c == '\0')
-          return ((char *) s);
-        return (0);
-}
-int     main (void)
-{
-        printf("%s", ft_strchr("Hola que tal", 'q'));
+	while (*s)
+	{
+		if (*s == c)
+		{
+			return ((char *) s);
+		}
+		s++;
+	}
+	if (c == '\0')
+		return ((char *) s);
+	return (0);
 }

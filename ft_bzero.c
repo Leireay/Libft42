@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: larellan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 08:02:36 by larellan          #+#    #+#             */
-/*   Updated: 2024/10/26 08:02:47 by larellan         ###   ########.fr       */
+/*   Created: 2024/10/26 08:21:54 by larellan          #+#    #+#             */
+/*   Updated: 2024/10/26 08:23:51 by larellan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*test any char for an alphabeth char*/
-int	ft_isalpha(int c)
+
+/**
+ * Ft_bzero() is a function that writes n zeroed bytes to the string s
+ * 
+ * erases the data in the n bytes of the memory
+	starting at the location pointed to by s, by writing zeros (bytes
+	containing '\0') to that area
+ * param void s This is the pointer to the memory area to be filled.
+ * param size_t n The number of bytes to be set to zero.
+ */
+
+void	ft_bzero(void *s, size_t n)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	return (0);
+	ft_memset(s, 0, n);
 }

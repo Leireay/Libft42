@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: larellan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 09:22:44 by larellan          #+#    #+#             */
-/*   Updated: 2024/10/26 09:22:46 by larellan         ###   ########.fr       */
+/*   Created: 2024/10/26 08:20:23 by larellan          #+#    #+#             */
+/*   Updated: 2024/10/26 08:20:25 by larellan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+/**
+ * Ft_putstr_fd() writes the string s to the file descriptor fd.
+ * 
+ * param char s The string to be printed.
+ * param int fd file descriptor
+ * 
+ * return the number of characters printed.
+ */
+void	ft_putstr_fd(char *s, int fd)
 {
-	size_t	i;
-	size_t	len;
+	int	i;
 
-	len = ft_strlen(src)
-		if (dstsize < 1)
-		return (len);
 	i = 0;
-	while (src[i] != '\0' && i < (dstsize - 1))
+	if (!s)
+		return ;
+	while (s[i] && fd >= 0)
 	{
-		dst[i] = src[i];
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
-	dst[i] = '\0';
-	return (len);
 }

@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: larellan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 09:22:44 by larellan          #+#    #+#             */
-/*   Updated: 2024/10/26 09:22:46 by larellan         ###   ########.fr       */
+/*   Created: 2024/10/26 08:19:15 by larellan          #+#    #+#             */
+/*   Updated: 2024/10/26 08:19:18 by larellan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+/**
+ * Apply the function f to each character of the string passed as argument, 
+ * and passing its index as
+ * first argument.
+ * 
+ * param char s The string to iterate through
+ * param void f a function that takes two parameters: an unsigned int 
+ * and a char*
+ * 
+ * return nothing.
+ */
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	i;
-	size_t	len;
+	int	i;
 
-	len = ft_strlen(src)
-		if (dstsize < 1)
-		return (len);
+	if (!s)
+		return ;
 	i = 0;
-	while (src[i] != '\0' && i < (dstsize - 1))
+	while (s[i] != '\0')
 	{
-		dst[i] = src[i];
+		f(i, &s[i]);
 		i++;
 	}
-	dst[i] = '\0';
-	return (len);
 }

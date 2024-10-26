@@ -1,17 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: larellan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/26 09:18:32 by larellan          #+#    #+#             */
+/*   Updated: 2024/10/26 09:18:34 by larellan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <libft.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t		i;
+	size_t	i;
 
-	i = 0;  				// inicializo i en cero
-	while (i < n && (s1[i] || s2[i]))	//mientras i sea menor que el tamño de mi buffer y por s1 de i o s2 de i exista
+	i = 0;
+	while (i < n && (s1[i] || s2[i]))
 	{
-		if (s1[i] != s2[i])		//si s1 de i es diferente a s2 de i
-			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);	// devuelvo la diferencia de la ultima pocision coincidente
-		else if (s1[i] == '\0')		// si s1 en la pocicion y es nulo
-			return (0);		//devuelvo null
-		i++;				// aumento el iterdor		
+		if (s1[i] != s2[i])
+			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+		else if (s1[i] == '\0')
+			return (0);
+		i++;
 	}
-	return (0);				// devuelvo null ( en el caso que no se me cumpla el while)
+	return (0);
 }

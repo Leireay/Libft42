@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: larellan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 09:28:12 by larellan          #+#    #+#             */
-/*   Updated: 2024/10/26 10:59:10 by larellan         ###   ########.fr       */
+/*   Created: 2024/10/26 08:17:46 by larellan          #+#    #+#             */
+/*   Updated: 2024/10/26 08:17:49 by larellan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
-char	*ft_strdup(const char *s1)
+/**
+ * It allocates memory for a given size and sets it to zero.
+ * 
+ * param size_t count The number of elements to be allocated.
+ * param size_t size The size of the memory block, in bytes.
+ * 
+ * return A pointer to the allocated memory.
+ */
+void	*ft_calloc(size_t count, size_t size)
 {
-	char	*ptr;
-	int	size;
+	void	*ptr;
 
-	size = ft_strlen(s1);
-	ptr = malloc(sizeof(char) * (size + 1));
+	ptr = malloc(count * size);
 	if (ptr == NULL)
-		return (NULL);
-	ft_memcpy(ptr, s1, size);
-	ptr[size] = '\0';
+		return (ptr);
+	ft_bzero(ptr, size * count);
 	return (ptr);
 }
