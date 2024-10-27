@@ -6,19 +6,19 @@
 /*   By: larellan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:22:44 by larellan          #+#    #+#             */
-/*   Updated: 2024/10/27 11:05:46 by larellan         ###   ########.fr       */
+/*   Updated: 2024/10/27 12:20:08 by dcastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	len;
 
-	len = ft_strlen(src)
-		if (dstsize < 1)
+	len = ft_strlen(src);
+	if (dstsize < 1)
 		return (len);
 	i = 0;
 	while (src[i] != '\0' && i < (dstsize - 1))
