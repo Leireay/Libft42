@@ -6,7 +6,7 @@
 /*   By: larellan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 08:19:15 by larellan          #+#    #+#             */
-/*   Updated: 2024/10/26 08:19:18 by larellan         ###   ########.fr       */
+/*   Updated: 2024/10/27 15:55:53 by dcastill         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;
-	
+
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if(i, &s[i]);
+		f(i, &s[i]);
 		i++;
 	}
 }
