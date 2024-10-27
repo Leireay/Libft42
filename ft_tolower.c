@@ -12,13 +12,7 @@
 
 #include "libft.h"
 
-/**
- *If c is a uppercase letter,returns its lowercase equivalent.
- *Otherwise, it returns c.
- *param int v The character to be converted.
- *return The lowercase version of the character.
- */
-int	ft_tolower(int c) //carácter pasado como argumento
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 		return (c + 32);

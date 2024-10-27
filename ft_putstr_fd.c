@@ -12,14 +12,6 @@
 
 #include "libft.h"
 
-/**
- * Ft_putstr_fd() writes the string s to the file descriptor fd.
- * 
- * param char s The string to be printed.
- * param int fd file descriptor
- * 
- * return the number of characters printed.
- */
 void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;

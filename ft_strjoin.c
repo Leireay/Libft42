@@ -12,17 +12,6 @@
 
 #include "libft.h"
 
-/**
- * It takes two strings, allocates a new string of the appropriate size, 
- * copies the first string into the new string, then copies the second 
- * string into the new string, and returns the new string
- * 
- * param char s1 The first string to be joined.
- * param char s2 The string to be appended to the end of s1.
- * 
- * return A pointer to a new string that is the result of the concatenation 
- * of s1 and s2.
- */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;

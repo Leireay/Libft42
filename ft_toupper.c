@@ -12,13 +12,6 @@
 
 #include "libft.h"
 
-/**
- * If the character passed as an argument is a lowercase, convert to upper
- * 
- * param int v The character to be converted.
- * 
- * return the value of the character converted to uppercase.
- */
 int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')

@@ -12,13 +12,6 @@
 
 #include "libft.h"
 
-/**
- * The above function converts an integer to a string.
- * 
- * param int num the number to be converted to a string
- * 
- * return A string of the number.
- */
 static	int	count_char(int num)
 {
 	int	count;

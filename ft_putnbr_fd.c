@@ -12,14 +12,6 @@
 
 #include "libft.h"
 
-/**
- * It prints the number n to the file descriptor fd.
- * 
- * param int n the number to print
- * param int fd The file descriptor of the file to output to. 
- * Standard output is file descriptor 1,
- * standard error is file descriptor 2.
- */
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
